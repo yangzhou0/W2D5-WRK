@@ -26,6 +26,7 @@ class LinkedList
 
   def initialize
     @head = nil
+    @tail = nil
   end
 
   def [](i)
@@ -49,7 +50,7 @@ class LinkedList
   end
 
   def append(key, val)
-    self[key] << {key => val}
+    Node.new(key,val)
   end
 
   def update(key, val)
